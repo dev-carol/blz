@@ -1,17 +1,12 @@
-import React from 'react';
-import { Box, Typography } from '@mui/material';
+import GamesPageTemplate from '../../templates/GamesPageTemplate';
 
-const Slots: React.FC = () => {
-  return (
-    <Box>
-      <Typography variant="h4" gutterBottom>
-        Slots
-      </Typography>
-      <Typography>
-        Aqui vai o conteúdo do jogo Slots, estatísticas, apostas, histórico e gráficos.
-      </Typography>
-    </Box>
-  );
-};
+const Slots = () => (
+ <GamesPageTemplate
+  title="Slots"
+  description="Explore os melhores slots disponíveis no momento."
+  category="slots"
+/>
+
+);
 
 export default Slots;

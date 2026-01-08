@@ -1,8 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link as RouterLink } from 'react-router-dom';
 import { AppBar, Toolbar, Button, Typography } from '@mui/material';
+import LoginModal from '../auth/LoginModal';
+import type { AuthMode } from '../../types/auth';
 
 const Header: React.FC = () => {
+  const [open, setOpen] = useState(false);
+  const [mode, setMode] = useState<AuthMode>('login');
+
+
   return (
     <AppBar
       position="sticky"
@@ -12,6 +18,7 @@ const Header: React.FC = () => {
       }}
     >
       <Toolbar sx={{ minHeight: 64 }}>
+
         <Typography
           variant="h6"
           component={RouterLink}
@@ -26,10 +33,35 @@ const Header: React.FC = () => {
           BLZ
         </Typography>
 
-        <Button color="inherit">Entrar</Button>
-        <Button color="inherit" variant="outlined">
+        <Button
+          color="inherit"
+          onClick={() => {
+            setMode('login');
+            setOpen(true);
+          }}
+        >
+          Entrar
+        </Button>
+
+
+        <Button
+          color="inherit"
+          variant="outlined"
+          onClick={() => {
+            setMode('register');
+            setOpen(true);
+          }}
+        >
           Cadastrar
         </Button>
+
+
+        <LoginModal
+          open={open}
+          mode={mode}
+          onClose={() => setOpen(false)}
+          onModeChange={setMode}
+        />
       </Toolbar>
     </AppBar>
   );

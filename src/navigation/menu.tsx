@@ -34,7 +34,7 @@ export const menu: MenuCategory[] = [
     icon: <SportsEsportsIcon />,
     items: [
       { name: 'League Of Legends', path: '/sports/leagueoflegends' },
-      { name: 'Counter Striker', path: '/sports/counterstriker' },
+      { name: 'Counter Striker', path: '/sports/' },
     ],
   },
 ];

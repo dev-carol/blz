@@ -1,17 +1,11 @@
-import React from 'react';
-import { Box, Typography } from '@mui/material';
+import GamesPageTemplate from '../../templates/GamesPageTemplate';
 
-const LeagueOfLegends: React.FC = () => {
-  return (
-    <Box>
-      <Typography variant="h4" gutterBottom>
-        LeagueOfLegends
-      </Typography>
-      <Typography>
-        Aqui vai o conteúdo do jogo League Of Legends, estatísticas, apostas, histórico e gráficos.
-      </Typography>
-    </Box>
-  );
-};
+const LeagueOfLegends = () => (
+ <GamesPageTemplate
+  title="League Of Legends"
+  description="Explore os melhores jogos de LeagueOfLegends disponíveis no momento."
+  category="leagueoflegends"
+/>
+);
 
 export default LeagueOfLegends;

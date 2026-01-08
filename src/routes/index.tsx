@@ -7,7 +7,7 @@ import Slots from '../pages/Cassino/Slots';
 import Crash from '../pages/Official/Crash';
 import Dice from '../pages/Official/Dice';
 import LeagueOfLegends from '../pages/Sports/LeagueOfLegends';
-import CounterStriker from '../pages/Sports/CounterStriker';
+import CounterStrike from '../pages/Sports/CounterStrike';
 
 
 
@@ -21,8 +21,7 @@ const AppRoutes: React.FC = () => {
       <Route path="/cassino/roulete" element={<MainLayout><Roulete /></MainLayout>} />
       <Route path="/cassino/slots" element={<MainLayout><Slots /></MainLayout>} />
       <Route path="/sports/leagueoflegends" element={<MainLayout><LeagueOfLegends /></MainLayout>} />
-     <Route path="/sports/counterstriker" element={<MainLayout><CounterStriker /></MainLayout>} />
-      
+     <Route path="/sports/counterstrike" element={<MainLayout><CounterStrike /></MainLayout>} />
     </Routes>
   );
 };

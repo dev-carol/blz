@@ -1,17 +1,12 @@
-import React from 'react';
-import { Box, Typography } from '@mui/material';
 
-const Crash: React.FC = () => {
-  return (
-    <Box>
-      <Typography variant="h4" gutterBottom>
-        Crash
-      </Typography>
-      <Typography>
-        Aqui vai o conteúdo do jogo Crash, estatísticas, apostas, histórico e gráficos.
-      </Typography>
-    </Box>
-  );
-};
+import GamesPageTemplate from '../../templates/GamesPageTemplate';
+
+const Crash = () => (
+ <GamesPageTemplate
+  title="Crash"
+  description="Explore os melhores jogos de crash disponíveis no momento."
+  category="crash"
+/>
+);
 
 export default Crash;

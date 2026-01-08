@@ -1,17 +1,11 @@
-import React from 'react';
-import { Box, Typography } from '@mui/material';
+import GamesPageTemplate from '../../templates/GamesPageTemplate';
 
-const Dice: React.FC = () => {
-  return (
-    <Box>
-      <Typography variant="h4" gutterBottom>
-        Dice
-      </Typography>
-      <Typography>
-        Aqui vai o conteúdo do jogo Dice, estatísticas, apostas, histórico e gráficos.
-      </Typography>
-    </Box>
-  );
-};
+const Dice = () => (
+ <GamesPageTemplate
+  title="Dice"
+  description="Explore os melhores jogos de Dice disponíveis no momento."
+  category="dice"
+/>
+);
 
 export default Dice;
