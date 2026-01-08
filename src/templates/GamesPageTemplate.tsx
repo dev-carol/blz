@@ -3,7 +3,7 @@ import { Box, Typography, Divider } from '@mui/material';
 
 import type { Game } from '../types/game';
 import { getGamesByCategory } from '../api/api';
-import GameGrid from '../componets/games/GameGrid';
+import GameGrid from '../components/games/GameGrid';
 
 interface GamesPageTemplateProps {
   title: string;

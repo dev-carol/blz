@@ -1,10 +1,10 @@
 import { Box } from '@mui/material';
-import HomeHero from '../componets/home/HomeHero';
-import HomeAbout from '../componets/home/HomeAbout';
-import HomeHowWorks from '../componets/home/HomeHowWorks';
-import HomePayments from '../componets/home/HomePayments';
-import HomeBenefits from '../componets/home/HomeBenefits';
-import HomeCTA from '../componets/home/HomeCTA';
+import HomeHero from '../components/home/HomeHero';
+import HomeAbout from '../components/home/HomeAbout';
+import HomeHowWorks from '../components/home/HomeHowWorks';
+import HomePayments from '../components/home/HomePayments';
+import HomeBenefits from '../components/home/HomeBenefits';
+import HomeCTA from '../components/home/HomeCTA';
 
 
 const Home = () => (

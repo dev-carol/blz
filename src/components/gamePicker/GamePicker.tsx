@@ -2,12 +2,11 @@ import {
   Dialog,
   DialogTitle,
   DialogContent,
-  Grid,
   Typography,
   Box,
+
 } from '@mui/material';
 import { useEffect, useState } from 'react';
-
 import type { Game } from '../../types/game';
 import { getAllGames } from '../../api/api';
 import GameCard from '../games/GameCard';
@@ -22,8 +21,6 @@ const GamePickerModal: React.FC<Props> = ({ open, onClose }) => {
 
   useEffect(() => {
     if (!open) return;
-    
-    setGames([]);
     getAllGames().then(setGames);
   }, [open]);
 
@@ -41,15 +38,22 @@ const GamePickerModal: React.FC<Props> = ({ open, onClose }) => {
             Carregando jogos...
           </Typography>
         ) : (
-          <Box mt={2}>
-            <Grid container spacing={2}>
-              {games.map((game) => (
-                <Grid item key={game.id} xs={12} sm={6} md={4} lg={3}>
-                  <GameCard game={game} />
-                </Grid>
-              ))}
-            </Grid>
+          <Box
+            mt={2}
+            display="grid"
+            gridTemplateColumns={{
+              xs: '1fr',
+              sm: 'repeat(2, 1fr)',
+              md: 'repeat(3, 1fr)',
+              lg: 'repeat(4, 1fr)',
+            }}
+            gap={2}
+          >
+            {games.map((game) => (
+              <GameCard key={game.id} game={game} />
+            ))}
           </Box>
+
         )}
       </DialogContent>
     </Dialog>

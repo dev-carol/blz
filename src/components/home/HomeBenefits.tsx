@@ -1,4 +1,4 @@
-import { Box, Typography, Grid } from '@mui/material';
+import { Box, Typography } from '@mui/material';
 
 const benefits = [
   {
@@ -17,7 +17,6 @@ const benefits = [
 
 const HomeBenefits = () => (
   <Box sx={{ mb: 8 }}>
-
     <Box
       sx={{
         maxWidth: 1200,
@@ -34,14 +33,17 @@ const HomeBenefits = () => (
         Por que escolher a BLZ?
       </Typography>
 
-      <Grid
-        container
-        spacing={4}
-        justifyContent="center"
+      <Box
+        display="grid"
+        gridTemplateColumns={{
+          xs: '1fr',
+          sm: 'repeat(3, 1fr)',
+        }}
+        gap={4}
         textAlign="center"
       >
         {benefits.map((b, i) => (
-          <Grid key={i} xs={12} sm={4}>
+          <Box key={i}>
             <Typography variant="h6" fontWeight={600} mb={1}>
               {b.title}
             </Typography>
@@ -49,9 +51,9 @@ const HomeBenefits = () => (
             <Typography color="text.secondary">
               {b.desc}
             </Typography>
-          </Grid>
+          </Box>
         ))}
-      </Grid>
+      </Box>
     </Box>
   </Box>
 );

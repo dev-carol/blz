@@ -1,4 +1,4 @@
-import { Box, Typography, Grid } from '@mui/material';
+import { Box, Typography } from '@mui/material';
 
 const steps = [
   {
@@ -34,14 +34,17 @@ const HomeHowWorks = () => (
         Como funciona
       </Typography>
 
-      <Grid
-        container
-        spacing={4}
-        justifyContent="center"
+      <Box
+        display="grid"
+        gridTemplateColumns={{
+          xs: '1fr',
+          sm: 'repeat(3, 1fr)',
+        }}
+        gap={4}
         textAlign="center"
       >
         {steps.map((step, i) => (
-          <Grid key={i} xs={12} sm={4}>
+          <Box key={i}>
             <Typography variant="h6" fontWeight={600} mb={1}>
               {step.title}
             </Typography>
@@ -49,9 +52,9 @@ const HomeHowWorks = () => (
             <Typography color="text.secondary">
               {step.desc}
             </Typography>
-          </Grid>
+          </Box>
         ))}
-      </Grid>
+      </Box>
     </Box>
   </Box>
 );
