@@ -5,7 +5,7 @@ import Home from '../pages/Home';
 import Roulete from '../pages/Cassino/Roulete';
 import Slots from '../pages/Cassino/Slots';
 import Crash from '../pages/Official/Crash';
-import Dice from '../pages/Sports/CounterStriker';
+import Dice from '../pages/Official/Dice';
 import LeagueOfLegends from '../pages/Sports/LeagueOfLegends';
 import CounterStriker from '../pages/Official/Dice';
 
