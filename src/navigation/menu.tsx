@@ -1,5 +1,7 @@
 import React from 'react';
 import SportsEsportsIcon from '@mui/icons-material/SportsEsports';
+import GroupWorkIcon from '@mui/icons-material/GroupWork';
+import CasinoIcon from '@mui/icons-material/Casino';
 
 export interface SubMenuItem {
   name: string;
@@ -15,7 +17,7 @@ export interface MenuCategory {
 export const menu: MenuCategory[] = [
    {
     category: 'Originais',
-    icon: <SportsEsportsIcon />,
+    icon: <GroupWorkIcon color='primary' />,
     items: [
       { name: 'Crash', path: '/official/crash' },
       { name: 'Dice', path: '/official/dice' },
@@ -23,7 +25,7 @@ export const menu: MenuCategory[] = [
   },
   {
     category: 'Cassino',
-    icon: <SportsEsportsIcon />,
+    icon: <CasinoIcon color='primary' />,
     items: [
       { name: 'Slots', path: '/cassino/slots' },
       { name: 'Roulete', path: '/cassino/roulete' },
@@ -31,10 +33,10 @@ export const menu: MenuCategory[] = [
   },
   {
     category: 'Sports',
-    icon: <SportsEsportsIcon />,
+    icon: <SportsEsportsIcon color='primary' />,
     items: [
       { name: 'League Of Legends', path: '/sports/leagueoflegends' },
-      { name: 'Counter Striker', path: '/sports/' },
+      { name: 'Counter Striker', path: '/sports/counterstrike' },
     ],
   },
 ];
