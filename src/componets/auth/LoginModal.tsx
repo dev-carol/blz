@@ -26,8 +26,8 @@ const LoginModal: React.FC<Props> = ({
   onModeChange,
 }) => {
   return (
-    <Dialog open={open} onClose={onClose} maxWidth="xs" fullWidth>
-      <DialogTitle sx={{ textAlign: 'center' }}>
+    <Dialog open={open} onClose={onClose} maxWidth="xs" fullWidth >
+      <DialogTitle sx={{ textAlign: 'center' }}  style={{backgroundColor:"#1d2f46ff"}}>
         {mode === 'login' ? 'Entrar' : 'Criar conta'}
 
         <IconButton
@@ -38,7 +38,7 @@ const LoginModal: React.FC<Props> = ({
         </IconButton>
       </DialogTitle>
 
-      <DialogContent>
+      <DialogContent  style={{backgroundColor:"#1d2f46ff"}}>
         {mode === 'login' ? <LoginForm /> : <RegisterForm />}
 
         <Stack alignItems="center" mt={3}>
