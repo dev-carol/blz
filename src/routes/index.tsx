@@ -7,7 +7,8 @@ import Slots from '../pages/Cassino/Slots';
 import Crash from '../pages/Official/Crash';
 import Dice from '../pages/Official/Dice';
 import LeagueOfLegends from '../pages/Sports/LeagueOfLegends';
-import CounterStriker from '../pages/Official/Dice';
+import CounterStriker from '../pages/Sports/CounterStriker';
+
 
 
 const AppRoutes: React.FC = () => {
